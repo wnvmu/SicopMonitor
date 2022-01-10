@@ -1,0 +1,14 @@
+﻿@model SicopMonitor.Web.ViewModels.StatusViewModel
+@using System.Globalization;
+
+@{
+    ViewData["Title"] = @Model.Mensagem;
+}
+
+<div class="text-center">
+    <p>Status</p>
+    <h1 class="display-4">@Model.Mensagem</h1>
+    <p>@Model.DataHora.ToString(new CultureInfo("pt-BR"))</p>
+    <p>@Model.TempoRespostaSegundos.ToString("0.0") segundos</p>
+    <p><a target="_blank" href="https://stats.uptimerobot.com/lY3B8U2PKB/783225882">Detalhes</a></p>
+</div>
